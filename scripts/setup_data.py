@@ -1,14 +1,14 @@
 import os
 import zipfile
-from kaggle.api.kaggle_api_extended import KaggleApi
+# from kaggle.api.kaggle_api_extended import KaggleApi
 from PIL import Image
 from tqdm import tqdm
 
 # Config
 DATASET_NAME = "paramaggarwal/fashion-product-images-dataset"
 DOWNLOAD_PATH = "../data_temp"  # Temporary download location
-RAW_IMAGES_PATH = "../data/raw/images"
-FINAL_IMAGES_PATH = "../data/processed/images"
+RAW_IMAGES_PATH = "data/raw/images"
+FINAL_IMAGES_PATH = "data/processed/images"
 TARGET_SIZE = (512, 512) # Resize big images to this (High Quality, Low Size)
 
 # def download_and_extract():
