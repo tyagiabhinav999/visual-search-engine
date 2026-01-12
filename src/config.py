@@ -8,7 +8,7 @@ STYLES_CSV = DATA_DIR / "styles.csv"
 INDEX_PATH = DATA_DIR / "faiss_index.bin"
 
 # Model Settings
-# We use a small, efficient CLIP model supported by ONNX
+# efficient CLIP model supported by ONNX
 MODEL_ID = "openai/clip-vit-base-patch32"
-ONNX_PATH = BASE_DIR / "models" / "onnx" # Where we save the compiled model
+ONNX_PATH = BASE_DIR / "models" / "onnx" # save the compiled model at this location
 EMBEDDING_DIM = 512
