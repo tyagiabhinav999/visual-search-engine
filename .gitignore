@@ -9,3 +9,11 @@ wheels/
 # Virtual environments
 .venv
 data
+
+# Model artifacts
+models/
+*.onnx
+*.onnx.data
+
+# HuggingFace cache
+.cache/
