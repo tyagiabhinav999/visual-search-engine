@@ -9,6 +9,7 @@ dependencies = [
     "fastapi>=0.128.0",
     "kaggle>=1.8.3",
     "numpy>=2.4.1",
+    "onnxscript>=0.5.7",
     "optimum[onnxruntime]>=2.1.0",
     "pandas>=2.3.3",
     "pillow>=12.1.0",
