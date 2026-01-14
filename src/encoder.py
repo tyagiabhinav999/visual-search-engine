@@ -1,4 +1,3 @@
-# src/encoder.py
 import torch
 import torch.nn as nn
 import onnxruntime as ort
@@ -88,16 +87,14 @@ class ImageEncoder:
         print(f"   - Outputs: {outputs}") # Expected: ['image_embeds']
         
         if "image_embeds" not in outputs[0]:
-            # This is the fail-safe. If the graph doesn't return the embedding, we crash early.
+            # fail-safe, if graph doesn't return the embedding, crash early.
             raise RuntimeError(f"Critical Export Error: Output is named {outputs[0]}, expected 'image_embeds'")
 
     def encode(self, image: Image.Image):
-        # Preprocess 
-        # return_tensors="np" gives us efficient numpy arrays
+        # Preprocess, return_tensors="np" gives us efficient numpy arrays
         inputs = self.processor(images=image, return_tensors="np")
         
-        # 2. Inference
-        # map strictly: Graph Input 'pixel_values' <- Preprocessed Array
+        # Inference, map strictly: Graph Input 'pixel_values' 
         onnx_inputs = {"pixel_values": inputs["pixel_values"]}
         
         # Run
