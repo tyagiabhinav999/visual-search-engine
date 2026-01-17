@@ -39,8 +39,8 @@ graph TD
     FE -->|HTTP POST| API[FastAPI Microservice]
 
     subgraph "Inference Layer (Online)"
-        API -->|Raw Pixel Data| ORT[ONNX Runtime (CPU)]
-        ORT -->|512-dim Vector| FAISS[FAISS HNSW Index]
+        API -->|Raw Pixel Data| ORT["ONNX Runtime (CPU)"]
+        ORT -->|512-dim Vector| FAISS["FAISS HNSW Index"]
     end
 
     subgraph "Data Layer (Offline)"
@@ -156,6 +156,6 @@ Standard CLIP models include both a Text and Vision transformer. For visual sear
 
 ### Author
 
-**[Abhinav Tyagi]**
+**Abhinav Tyagi**
 _Machine Learning Engineer_
 [LinkedIn](https://www.linkedin.com/in/abhinav-tyagi-/)
